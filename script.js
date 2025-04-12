@@ -6,6 +6,15 @@ function calculateValues() {
     let lastPeriod = parseInt(document.getElementById("lastPeriod").value);
     let lastNumber = parseInt(document.getElementById("lastNumber").value);
 
+    let currentNumberInput = document.getElementById("currentNumber");
+    if ([4, 5, 9].includes(currentNumber)) {
+        currentNumberInput.style.backgroundColor = "red";
+    } else if ([0, 1].includes(currentNumber)) {
+        currentNumberInput.style.backgroundColor = "yellow";
+    } else {
+        currentNumberInput.style.backgroundColor = "white";
+    }
+
     let arr = [currentPeriod, currentNumber, lastPeriod, lastNumber];
     console.log("Number was: ", arr);
 
@@ -53,6 +62,8 @@ function calculateValues() {
     // Display finall (Filtered Array) in the output section
     document.getElementById("finallResult").innerText = finall.join(", ");
 
+    // Removed the incorrect styling logic for finallResult
+
     // -----------------One digit Conversion-----------------
     let totall = total.toString();
     let val;
@@ -65,6 +76,14 @@ function calculateValues() {
 
     // Display val (One Digit Conversion) in the output section
     document.getElementById("valResult").innerText = val;
+
+    // Add correct styling logic for valResult
+    let valResultElement = document.getElementById("valResult");
+    if ([4, 5, 9].includes(val)) {
+        valResultElement.style.backgroundColor = "red";
+    } else {
+        valResultElement.style.backgroundColor = "white";
+    }
 }
 
 // Event listeners to trigger calculation on button click
