@@ -41,7 +41,8 @@ img{
     border: 1px solid black;
     border-radius: 10px;
 
-    font-size: 17px;
+    font-size: 15px;
+    
 }
 
 .result{
@@ -68,5 +69,5 @@ span{
 
 input{
     height: 20px;
-    width: 40%;
+    width: 90%;
 }
