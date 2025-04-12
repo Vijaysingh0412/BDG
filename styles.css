@@ -35,7 +35,7 @@ img{
 
 .btn{
     background-color: rgb(47, 255, 182);
-    width: 90px;
+    width: 100px;
     height: 40px;
 
     border: 1px solid black;
@@ -68,4 +68,5 @@ span{
 
 input{
     height: 20px;
+    width: 40%;
 }
