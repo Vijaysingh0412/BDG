@@ -8,29 +8,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Calculate Sum and Digit Sums</h1>
+    <img src="./assets/logo.png">
 
-    <div>
-        <label for="currentPeriod">Current Period:</label>
-        <input type="number" id="currentPeriod" value="3"><br>
+    <div class="data">
+       <div>
+        <div>
+            <label for="currentPeriod">Current Period:</label>
+            <input type="number" id="currentPeriod" value="3"><br>
+           </div>
+    
+            <div>
+                <label for="currentNumber">Current Number:</label>
+                <input type="number" id="currentNumber" value="6"><br>
+            </div>
+       </div>
 
-        <label for="currentNumber">Current Number:</label>
-        <input type="number" id="currentNumber" value="6"><br>
-
-        <label for="lastPeriod">Last Period:</label>
-        <input type="number" id="lastPeriod" value="2"><br>
-
-        <label for="lastNumber">Last Number:</label>
-        <input type="number" id="lastNumber" value="4"><br>
+       <div>
+        <div>
+            <label for="lastPeriod">Last Period:</label>
+            <input type="number" id="lastPeriod" value="2"><br>
+           </div>
+    
+            <div>
+                <label for="lastNumber">Last Number:</label>
+            <input type="number" id="lastNumber" value="4"><br>
+            </div>
+       </div>
 
         <!-- Add button for calculation -->
-        <button onclick="calculateValues()">Calculate</button>
+        
     </div>
+    <button class="btn" onclick="calculateValues()">Calculate</button>
 
-    <div>
-        <h3>Results:</h3>
-        <p><strong>Filtered Array (finall):</strong> <span id="finallResult"></span></p>
-        <p><strong>One Digit Conversion (val):</strong> <span id="valResult"></span></p>
+    <div class="result">
+        <!-- <h3>Results</h3> -->
+        <p><strong>Combination :</strong> 
+            <span id="finallResult"></span></p>
+        <p><strong>Result:</strong> <span id="valResult"></span></p>
     </div>
 </body>
 </html>
