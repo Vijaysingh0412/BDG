@@ -125,6 +125,17 @@ document.getElementById("lastNumber").addEventListener("keydown", function(e) {
     });
 });
 
+// Restrict input to single digits (0–9)
+["currentPeriod", "currentNumber", "lastPeriod", "lastNumber"].forEach(id => {
+    const input = document.getElementById(id);
+    input.addEventListener("input", function (e) {
+        const val = e.target.value;
+        if (!/^[0-9]$/.test(val)) {
+            e.target.value = "";
+        }
+    });
+});
+
 function resetInputs() {
     document.getElementById("currentPeriod").value = "";
     document.getElementById("currentNumber").value = "";
