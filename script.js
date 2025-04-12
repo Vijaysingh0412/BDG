@@ -91,3 +91,47 @@ function calculateValues() {
 
 // Initial calculation when the page loads
 calculateValues();
+
+document.getElementById("currentPeriod").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        document.getElementById("currentNumber").focus();
+    }
+});
+
+document.getElementById("currentNumber").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        document.getElementById("lastPeriod").focus();
+    }
+});
+
+document.getElementById("lastPeriod").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        document.getElementById("lastNumber").focus();
+    }
+});
+
+document.getElementById("lastNumber").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        calculateValues();
+    }
+});
+
+["currentPeriod", "currentNumber", "lastPeriod", "lastNumber"].forEach(id => {
+    document.getElementById(id).addEventListener("focus", function(e) {
+        let input = e.target;
+        let val = input.value;
+        input.value = '';
+        input.value = val;
+    });
+});
+
+function resetInputs() {
+    document.getElementById("currentPeriod").value = "";
+    document.getElementById("currentNumber").value = "";
+    document.getElementById("lastPeriod").value = "";
+    document.getElementById("lastNumber").value = "";
+    document.getElementById("currentNumber").style.backgroundColor = "white";
+    document.getElementById("valResult").innerText = "";
+    document.getElementById("valResult").style.backgroundColor = "white";
+    document.getElementById("finallResult").innerText = "";
+}
